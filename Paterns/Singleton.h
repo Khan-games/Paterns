@@ -1,4 +1,7 @@
 #pragma once
+
+#include <mutex>
+
 class Singleton
 {
 public:
@@ -10,6 +13,7 @@ public:
 
 private:
 	inline static Singleton* instance = nullptr; 
+	inline static std::mutex m_creation;
 
 	Singleton(); // private constructor
 };
