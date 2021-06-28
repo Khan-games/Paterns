@@ -4,8 +4,9 @@ class Singleton
 public:
 	static Singleton& getInstance();
 private:
-	Singleton* instance = nullptr;
+	inline static Singleton* instance = nullptr; 
 
 	Singleton(); // private constructor
 };
+
 
